@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ferrugem",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.fe",
+          "match": "\\b(se|enquanto|para|em|retorna)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.fe",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.fe",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ferrugem",
+  "contributes": {
+    "grammars": [
+      {
+        "language": "ferrugem",
+        "scopeName": "source.ferrugem",
+        "path": "syntaxes/ferrugem.tmLanguage.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "ferrugem",
+        "aliases": ["Ferrugem"],
+        "extensions": [".fe"],
+        "configuration": "language-configuration.json"
+      }
+    ],
+    "configuration": {
+      "comments": {
+        "lineComment": "//",
+        "blockComment": ["/*", "*/"]
+      }
+    },
+    "views": {
+      "preview": {
+        "mermaid": {
+          "type": "webview",
+          "selector": ["markdown", "mermaid"],
+          "title": "Mermaid Preview"
+        }
+      }
+    }
+  },
+  "icon": "./icon.svg",
+  "activationEvents": ["onLanguage:ferrugem"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ferrugem",
+  "displayName": "Ferrugem",
+  "description": "Suporte para a linguagem Ferrugem, uma variação de Portugol escrito em Rust",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fe",
+      "aliases": ["Ferrugem", "fe"],
+      "extensions": [".fe"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fe",
+      "scopeName": "source.ferrugem",
+      "path": "./syntaxes/fe.tmLanguage.json"
+    }]
+  }
+}
